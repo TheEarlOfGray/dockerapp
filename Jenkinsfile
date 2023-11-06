@@ -16,7 +16,6 @@ pipeline {
                 sh 'docker build -t theearlofgray/app1 .'
                 sh 'docker login -u ${DOCKER_LOGIN_USR} -p ${DOCKER_LOGIN_PSW}'
                 sh 'docker push theearlofgray/app1'
-                
             }
         }
         stage('Deploy') {
